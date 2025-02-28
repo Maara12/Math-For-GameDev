@@ -9,16 +9,9 @@ public class MathConceptTester : MonoBehaviour
     {
         if(Input.GetKeyDown(KeyCode.T))
         {
-            RoundNumber();
+           PowerOfNumber();
         }
-        if(Input.GetKeyDown(KeyCode.R))
-        {
-            CeilNumber();
-        }
-        if(Input.GetKeyDown(KeyCode.Y))
-        {
-            FloorNumber();
-        }
+        
     }
 
     #region CHAPTER 1 ADDITION AND SUBTRACTION
@@ -57,5 +50,41 @@ public class MathConceptTester : MonoBehaviour
 
     #endregion
     
-    
+    #region CHAPTER 5 REMAINDER AND MODULO
+
+
+    public void FindPlayerTurn()
+    {
+        int randomNUm = UnityEngine.Random.Range(1, 100);
+
+        if(randomNUm % 4 == 0)
+        {
+            Debug.Log("Player 1 turn");
+        }
+        else if(randomNUm % 4 == 1)
+        {
+            Debug.Log("Player 2 turn");
+        }
+        else if(randomNUm % 4 == 2)
+        {
+            Debug.Log("Player 3 turn");
+        }
+        else if(randomNUm % 4 == 3)
+        {
+            Debug.Log("Player 4 turn");
+        }
+    }
+
+    #endregion
+
+    #region CHAPTER 6 POWER AND EXPONENTIATION
+
+
+    public void PowerOfNumber()
+    {
+        Debug.Log("2^24: " + Mathf.Pow(2,24));
+    }
+
+    #endregion
+
 }
