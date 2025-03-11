@@ -9,7 +9,7 @@ public class MathConceptTester : MonoBehaviour
     {
         if(Input.GetKeyDown(KeyCode.T))
         {
-           PowerOfNumber();
+          FindBinaryAndHexaDecimal(173);
         }
         
     }
@@ -83,6 +83,18 @@ public class MathConceptTester : MonoBehaviour
     public void PowerOfNumber()
     {
         Debug.Log("2^24: " + Mathf.Pow(2,24));
+    }
+
+    #endregion
+
+     #region CHAPTER 21 NUMBER BASES
+
+
+    public void FindBinaryAndHexaDecimal(int number)
+    {
+        string binary = Convert.ToString(number, 2);
+        string hex = Convert.ToString(number, 16);
+        Debug.Log($"Binary: {binary} Hex: {hex}");
     }
 
     #endregion
